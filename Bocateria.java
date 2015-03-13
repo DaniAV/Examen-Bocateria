@@ -45,12 +45,14 @@ public class Bocateria
      */
     public void visualizaDatosClientesEnCola()
     {
-        if(primeraPersonaEnCola != null)
+        System.out.println(primeraPersonaEnCola.toString()); //Se imprime la primera
+        while(primeraPersonaEnCola.getSiguienteEnLaCola() != null) //Si hay mas a la cola
         {
-            System.out.println(primeraPersonaEnCola.toString());
+            System.out.println(primeraPersonaEnCola.getSiguienteEnLaCola().toString()); //Se imprime la siguiente
+            primeraPersonaEnCola = primeraPersonaEnCola.getSiguienteEnLaCola();
         }
     }
-    
+
     /**
      * Metodo que despacha al cliente primero en la cola
      */
@@ -59,6 +61,21 @@ public class Bocateria
         facturacionActual = (primeraPersonaEnCola.getNumeroDeBocadillos()) * PRECIO_BOCADILLO;
         clientesDEspachados.put(primeraPersonaEnCola.getNumeroCliente(), primeraPersonaEnCola);
         primeraPersonaEnCola = primeraPersonaEnCola.getSiguienteEnLaCola();
+    }
+
+    /**
+     * Metodo que muestra los datos de la bocateria en el momento actual
+     */
+    public void InformacionDeLaBocateria()
+    {
+        System.out.println("Factuaracion actual: " + facturacionActual);
+        System.out.println("Estado de la cola:");
+        Cliente primero = primeraPersonaEnCola;
+        while(primero != null)
+        {
+            System.out.println(primero.toString());
+            primero = primero.getSiguienteEnLaCola();
+        }
     }
 }
 
