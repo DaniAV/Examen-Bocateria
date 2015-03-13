@@ -2,7 +2,10 @@
 comment0.params=
 comment0.target=Bocateria()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Bocateria\r\n
-comment1.params=
-comment1.target=void\ llegaNuevoClienteALaCola()
-comment1.text=\r\n\ \r\n
-numComments=2
+comment1.params=numeroDeBocadillos
+comment1.target=void\ llegaNuevoClienteALaCola(int)
+comment1.text=\r\n\ Metodo\ que\ simula\ la\ llegada\ de\ un\ cliente\ a\ la\ cola\r\n
+comment2.params=
+comment2.target=void\ visualizaDatosClientesEnCola()
+comment2.text=\r\n\ Metodo\ que\ muestra\ por\ pantalla\ los\ datos\ de\ los\ clientes\ \r\n\ que\ estan\ a\ la\ cola\ actualmente\r\n
+numComments=3

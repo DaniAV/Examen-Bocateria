@@ -24,10 +24,31 @@ public class Bocateria
     }
 
     /**
-     * 
+     * Metodo que simula la llegada de un cliente a la cola
      */
-    public void llegaNuevoClienteALaCola()
+    public void llegaNuevoClienteALaCola(int numeroDeBocadillos)
     {
-        primeraPersonaEnCola = new Cliente();
+        Cliente nuevoCliente = new Cliente(numeroDeBocadillos);
+        if(primeraPersonaEnCola == null)
+        {
+            primeraPersonaEnCola = nuevoCliente;
+        }
+        else
+        {
+            primeraPersonaEnCola.setSiguienteEnLaCola(nuevoCliente);
+        }
+    }
+
+    /**
+     * Metodo que muestra por pantalla los datos de los clientes 
+     * que estan a la cola actualmente
+     */
+    public void visualizaDatosClientesEnCola()
+    {
+        if(primeraPersonaEnCola != null)
+        {
+            System.out.println(primeraPersonaEnCola.toString());
+        }
     }
 }
+

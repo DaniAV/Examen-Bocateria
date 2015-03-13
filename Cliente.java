@@ -16,22 +16,52 @@ public class Cliente
     /**
      * Constructor for objects of class Cliente
      */
-    public Cliente()
+    public Cliente(int numeroDeBocadillos)
     {
         numeroCliente = numeroClienteActual++;
-        siguienteEnLaCola = new Cliente();
-        numeroDeBocadillos = 0;
-        
+        this.siguienteEnLaCola = null;
+        this.numeroDeBocadillos = numeroDeBocadillos;
+       numeroClienteActual = numeroClienteActual+1;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     *Metodo que devuelve la siguiente persona en cola
      */
-    public void sampleMethod(int y)
+    public Cliente getSiguienteEnLaCola()
     {
-        
+        return siguienteEnLaCola;
+    }
+    
+    /**
+     * Metodo que devuelve el numero de bocadillos del cliente
+     */
+    public int getNumeroDeBocadillos()
+    {
+        return this.numeroDeBocadillos;
+    }
+    
+    /**
+     * Metodo que devuelve el numero del cliente
+     */
+    public int getNumeroCliente()
+    {
+        return numeroCliente;
+    }
+    
+    /**
+     * Metodo que devuelve los datos del cliente
+     */
+    public String toString()
+    {
+        String datos = "Cliente: " + numeroCliente + "Nº Bocadillos: "  + numeroDeBocadillos + "("+numeroDeBocadillos*5+ " Euros" +")"; ;
+        return datos;
+    }
+    
+    /**
+     * Metodo que modifica el numero de cliente en la cola
+     */
+    public void setSiguienteEnLaCola(Cliente cliente)
+    {
+        siguienteEnLaCola = cliente;
     }
 }

@@ -1,8 +1,20 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Cliente()
+comment0.params=numeroDeBocadillos
+comment0.target=Cliente(int)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Cliente\r\n
-comment1.params=y
-comment1.target=void\ sampleMethod(int)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=2
+comment1.params=
+comment1.target=Cliente\ getSiguienteEnLaCola()
+comment1.text=\r\nMetodo\ que\ devuelve\ la\ siguiente\ persona\ en\ cola\r\n
+comment2.params=
+comment2.target=int\ getNumeroDeBocadillos()
+comment2.text=\r\n\ Metodo\ que\ devuelve\ el\ numero\ de\ bocadillos\ del\ cliente\r\n
+comment3.params=
+comment3.target=int\ getNumeroCliente()
+comment3.text=\r\n\ Metodo\ que\ devuelve\ el\ numero\ del\ cliente\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ Metodo\ que\ devuelve\ los\ datos\ del\ cliente\r\n
+comment5.params=cliente
+comment5.target=void\ setSiguienteEnLaCola(Cliente)
+comment5.text=\r\n\ Metodo\ que\ modifica\ el\ numero\ de\ cliente\ en\ la\ cola\r\n
+numComments=6
