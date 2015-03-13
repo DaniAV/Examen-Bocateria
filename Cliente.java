@@ -11,7 +11,7 @@ public class Cliente
     private int numeroCliente;
     private Cliente siguienteEnLaCola;
     private int numeroDeBocadillos;
-    private static int numeroClienteActual = 0;
+    private static int numeroClienteActual = 1;
 
     /**
      * Constructor for objects of class Cliente
@@ -53,7 +53,7 @@ public class Cliente
      */
     public String toString()
     {
-        String datos = "Cliente: " + numeroCliente + "Nº Bocadillos: "  + numeroDeBocadillos + "("+numeroDeBocadillos*5+ " Euros" +")"; ;
+        String datos = "Cliente: " + numeroCliente + " Nº Bocadillos: "  + numeroDeBocadillos + "("+numeroDeBocadillos*5+ " Euros" +")"; ;
         return datos;
     }
     

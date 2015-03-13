@@ -45,11 +45,24 @@ public class Bocateria
      */
     public void visualizaDatosClientesEnCola()
     {
-        System.out.println(primeraPersonaEnCola.toString()); //Se imprime la primera
-        while(primeraPersonaEnCola.getSiguienteEnLaCola() != null) //Si hay mas a la cola
+        boolean salir = false;
+        Cliente primero = primeraPersonaEnCola; //se guarda el primero en cola
+        if(primero != null)
         {
-            System.out.println(primeraPersonaEnCola.getSiguienteEnLaCola().toString()); //Se imprime la siguiente
-            primeraPersonaEnCola = primeraPersonaEnCola.getSiguienteEnLaCola();
+            //repetir esto
+            while(salir == false)
+            {
+                System.out.println(primero.toString()); //Se imprime el primero en cola
+                if(primero.getSiguienteEnLaCola() != null) //Si hay alguno despues
+                {
+                    primero = primero.getSiguienteEnLaCola();
+                    System.out.println(primero.toString());
+                }
+                else
+                {
+                    salir = true;
+                }
+            }
         }
     }
 
