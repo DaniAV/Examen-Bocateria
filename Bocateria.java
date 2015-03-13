@@ -50,5 +50,15 @@ public class Bocateria
             System.out.println(primeraPersonaEnCola.toString());
         }
     }
+    
+    /**
+     * Metodo que despacha al cliente primero en la cola
+     */
+    public void despacharClienteActual()
+    {
+        facturacionActual = (primeraPersonaEnCola.getNumeroDeBocadillos()) * PRECIO_BOCADILLO;
+        clientesDEspachados.put(primeraPersonaEnCola.getNumeroCliente(), primeraPersonaEnCola);
+        primeraPersonaEnCola = primeraPersonaEnCola.getSiguienteEnLaCola();
+    }
 }
 
